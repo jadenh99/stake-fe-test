@@ -1,0 +1,7 @@
+{
+  "name": "stake-fe-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
