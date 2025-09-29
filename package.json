@@ -5,10 +5,10 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ionic serve",
+    "build": "ionic build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ionic test",
     "lint": "ng lint"
   },
   "private": true,
