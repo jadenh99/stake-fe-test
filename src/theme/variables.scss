@@ -1,2 +1,21 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+:root,
+:root.md {
+  --ion-background-color: #fff;
+  --ion-text-color: #141414;
+  --ion-padding: 24px;
+  --ion-tab-bar-background: #fff;
+  --ion-background-color-step-150: #f3f3f3;
+  --color-selected: #141414;
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+  --ion-font-family: "Open Sans", sans-serif;
+
+  --ion-item-background: grey;
+}
+
+ion-tab-bar {
+  --color: #959595;
+  --color-selected: #141414;
+}

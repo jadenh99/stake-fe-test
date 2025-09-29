@@ -1,0 +1,130 @@
+@import "../../global.scss";
+
+.card {
+  &__container {
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 16px;
+    background: transparent;
+    text-align: start;
+    color: #141414;
+    &--sm {
+      width: 126px;
+      .card__top {
+        align-items: flex-start;
+      }
+      .card__name__container {
+        flex-direction: column;
+        * + * {
+          &::before {
+            content: none;
+          }
+        }
+      }
+      .card__symbol {
+        margin-top: 16px;
+        font-weight: 800;
+      }
+      .card__price {
+        order: 1;
+      }
+      .card__title {
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+    }
+    &--md {
+      width: 202px;
+      .card__top {
+        .card__symbol {
+          font-weight: 800;
+          align-self: center;
+          margin: 0 0 0 8px;
+          color: #141414;
+        }
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      .card__title,
+      .card__symbol {
+        @include font-size(12px);
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+    }
+    &--lg {
+      width: max-content;
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    app-type {
+      margin-left: auto;
+    }
+    img {
+      width: 32px;
+      aspect-ratio: 1/1;
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+  &__symbol {
+    @include font-size(14px);
+    line-height: 1.3;
+    letter-spacing: 0.25px;
+    font-weight: 800;
+    color: #7e7e7e;
+    margin-top: 4px;
+    font-weight: normal;
+  }
+  &__price {
+    @include font-size(18px);
+    line-height: 1.3;
+    letter-spacing: 0.25px;
+    font-weight: 800;
+    margin-top: 12px;
+  }
+  &__name__container {
+    display: flex;
+    * + * {
+      &::before {
+        content: "•";
+        padding: 0 4px;
+      }
+    }
+  }
+  &__title {
+    margin-top: 4px;
+    color: #7e7e7e;
+    @include font-size(14px);
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 1.3;
+  }
+  &__information {
+    width: 100%;
+    & > div {
+      &:not(:first-child) {
+        margin-left: 24px;
+      }
+      display: flex;
+      align-items: center;
+    }
+    margin-top: 16px;
+    border-top: 1px solid #e3e3e3;
+    display: flex;
+    gap: 24px;
+    padding-top: 12px;
+    img {
+      vertical-align: middle;
+      margin-right: 6px;
+      width: 18px;
+      aspect-ratio: 1/1;
+    }
+  }
+}

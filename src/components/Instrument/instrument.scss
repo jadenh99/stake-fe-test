@@ -1,0 +1,49 @@
+@import "../../global.scss";
+
+.instrument {
+  &__container {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+  }
+  &__information {
+    flex: 1;
+  }
+}
+.symbol {
+  @include font-size(14px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.25px;
+}
+
+.shares {
+  color: #959595;
+  @include font-size(12px);
+  letter-spacing: 0.25px;
+  line-height: 1.3;
+}
+
+.monetary-value {
+  @include font-size(13px);
+  line-height: 1.3;
+  letter-spacing: 0.25px;
+  align-self: center;
+}
+
+.percentage-change {
+  @include font-size(13px);
+  align-self: center;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #fff;
+  padding: 4.5px 9px;
+  border-radius: 4px;
+  width: fit-content;
+  &--positive {
+    background-color: #22b692;
+  }
+  &--negative {
+    background-color: #f54c4c;
+  }
+}

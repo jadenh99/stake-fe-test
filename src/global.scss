@@ -35,3 +35,30 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./assets/fonts/OpenSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+$base-font-size: 16px;
+
+// Function to convert px to rem
+@function rem($px, $base: $base-font-size) {
+  @return ($px / $base) * 1rem;
+}
+
+// Mixin for font-size
+@mixin font-size($size) {
+  font-size: rem($size);
+}

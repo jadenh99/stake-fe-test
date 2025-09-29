@@ -1,0 +1,10 @@
+{
+  "id": "28da8078f8dsads",
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "holdings": [
+    { "symbol": "CRM", "shares": 12 },
+    { "symbol": "ORCL", "shares": 1 },
+    { "symbol": "INTC", "shares": 7 }
+  ]
+}

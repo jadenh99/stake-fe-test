@@ -1,0 +1,11 @@
+<div
+  *ngIf="type"
+  [ngClass]="{
+  'type--etf': type === 'etf',
+  'type--stock': type === 'stock',
+  'type--otc' : type === 'otc'
+  }"
+>
+  {{ (type === 'etf' || type === 'otc') ? (type | capitalise: 'all') : (type |
+  capitalise: 'first') }}
+</div>

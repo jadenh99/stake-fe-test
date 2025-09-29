@@ -1,0 +1,17 @@
+<section class="instrument__container" *ngIf="stock">
+  <div class="instrument__information">
+    <div class="symbol">{{ stock.symbol }}</div>
+    <div class="shares">{{ holding?.shares | i18nPlural: shareMapping}}</div>
+  </div>
+
+  <div class="monetary-value">{{ holdingValue | currency }}</div>
+  <div
+    class="percentage-change"
+    [ngClass]="{
+    'percentage-change--positive': percentageChange > 0,
+    'percentage-change--negative': percentageChange < 0
+  }"
+  >
+    {{ percentageChange | percent }}
+  </div>
+</section>

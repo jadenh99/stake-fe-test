@@ -1,0 +1,35 @@
+<button
+  class="card__container"
+  *ngIf="stock"
+  [ngClass]="{'card__container--lg': size === 'lg', 'card__container--sm': size === 'sm', 'card__container--md': size === 'md' }"
+>
+  <div class="card__header">
+    <div class="card__top">
+      <img src="{{ stock.logo}}" alt="Card Image" />
+      <div *ngIf="size === 'md'" class="card__symbol">APPL</div>
+      <app-type [type]="stock.type"></app-type>
+    </div>
+    <div class="card__price">$131.04</div>
+    <div class="card__name__container">
+      <div class="card__symbol">{{ stock.symbol }}</div>
+      <div class="card__title">{{ stock.fullName }}</div>
+    </div>
+  </div>
+  <div *ngIf="size === 'lg'" class="card__information">
+    <div>
+      <img src="../../assets/icons/circle-dollar.svg" alt="Card Image" />
+      <span>{{ stock.volume | abbreviateNumber }}</span>
+    </div>
+    <div>
+      <img src="../../assets/icons/target.svg" alt="Card Image" />
+      <span>{{ stock.marketCap | abbreviateNumber }}</span>
+    </div>
+    <div>
+      <img src="../../assets/icons/square-dollar.svg" alt="Card Image" />
+      <span
+        >{{ pricingDetail?.low | abbreviateNumber:0}} - {{ pricingDetail?.high |
+        abbreviateNumber:0 }}
+      </span>
+    </div>
+  </div>
+</button>

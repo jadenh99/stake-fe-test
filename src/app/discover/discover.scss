@@ -1,0 +1,17 @@
+ion-searchbar {
+  --background: #f3f3f3;
+  --border-radius: 32px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --box-shadow: none;
+  --color: #959595;
+  //   --placeholder-color: #959595;
+  &::part(search-icon) {
+    color: #141414;
+  }
+}
+ion-searchbar::part(search-icon) {
+  color: #141414;
+}

@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="title__container">
+    <h1>{{ pageTitle }}</h1>
+  </div>
+  <div class="equity__container">
+    <div class="equity__label">Total Equity</div>
+    <div class="equity__value">{{ equity }}</div>
+  </div>
+  <div class="holdings__container">
+    <h2 class="holdings__title">Holdings</h2>
+    <div class="holdings__stocks" *ngIf="!loadingStocks; else loading">
+      <app-instrument
+        *ngFor="let holding of holdings"
+        [holding]="holding"
+      ></app-instrument>
+    </div>
+    <ng-template #loading>
+      <div class="holdings__loading">
+        <ion-spinner name="circles"></ion-spinner>
+      </div>
+    </ng-template>
+  </div>
+  <div class="stocks__container">
+    <h2 class="stocks__title">Trending Stocks</h2>
+    <div class="stocks__carousel">
+      <app-card
+        *ngFor="let stock of stocks"
+        [size]="'lg'"
+        [stock]="stock"
+      ></app-card>
+    </div>
+  </div>
+</ion-content>
