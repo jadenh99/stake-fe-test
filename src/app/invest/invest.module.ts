@@ -7,7 +7,6 @@ import { InvestPage } from './invest';
 import { InvestPageRoutingModule } from './invest-routing.module';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
-import { StockService } from 'src/services/StockService';
 
 @NgModule({
   imports: [
